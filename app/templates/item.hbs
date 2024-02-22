@@ -1,0 +1,20 @@
+{{page-title "Item"}}
+<Container>
+    <div class="product item-details-page">
+    <Product::ProductImage @src={{this.productImage}} />
+
+    <Product::ProductDetail @title={{this.model.bookDetails.title}} @price={{this.model.bookDetails.price}}
+     @stock="{{this.model.bookDetails.stock}}" @isDetail="{{true}}"/>
+  </div>
+  <h5 class="mt-5">About Book</h5>
+  <div class="detailsbook">
+  <ul>
+   
+     <li> Genre:- {{this.model.bookDetails.genre}}</li>
+    <li> description:- {{this.model.bookDetails.description}}</li>
+    <li> Author: {{concat this.model.authorDetails.first_name " " this.model.authorDetails.last_name}}</li>
+
+    <li> isbn:- {{this.model.bookDetails.isbn}}</li>
+  </ul>
+  </div>
+</Container>

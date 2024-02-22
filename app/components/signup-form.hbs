@@ -1,0 +1,29 @@
+<div class="signup-form">
+    <h2>Sign Up</h2>
+    <form {{on "submit" this.signup}}>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" oninput={{action
+                (mut this.name) value="target.value" }}>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+                oninput={{action (mut this.email) value="target.value" }}>
+        </div>
+        <div class="form-group">
+            <label for="mobilenumber">Mobilenumber</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" class="form-control" placeholder="" oninput={{action (mut this.mobileNumber) value="target.value" }}>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password"
+                oninput={{action (mut this.password) value="target.value" }}>
+        </div>
+
+        <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in mr-1"></i>Sign
+            Up</button>
+
+    </form>
+</div>

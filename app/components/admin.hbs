@@ -1,0 +1,37 @@
+<table class="book-table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Description</th>
+      <th>ISBN</th>
+      <th>Genre</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each @book as |book|}}
+      <tr>
+        <td><img src={{book.image}} alt="Book Cover"></td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.stock}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.genre}}</td>
+        <td>
+           <LinkTo @route="bookedit" @model={{book.id}}>
+          <button type="button">Edit</button> </LinkTo>
+          {{!-- {{on "click" (fn this.editBook book.id)}} --}}
+          <Deletebook @bookid="{{book.id}}"/>
+          {{!--  --}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+   <LinkTo @route="bookcreate"><button type="button">Create</button></LinkTo>
+</table>

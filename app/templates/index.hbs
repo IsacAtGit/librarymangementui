@@ -1,0 +1,8 @@
+{{page-title "Library mangement"}}
+<Container>
+   
+   {{#each this.model as |book|}}
+  
+   <Product @book={{book}} />
+   {{/each}}
+</Container>

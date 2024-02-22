@@ -1,0 +1,9 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import './homepage.scss';
+@import './product.scss';
+@import './cart.scss';
+@import './login.scss';
+@import './signup-form.scss';
+// styles.scss
+@import 'admin';
+@import 'profile';
